@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.com/pmonks/lwbd.svg?branch=master)](https://travis-ci.com/pmonks/lwbd)
+
 lwbd
 ====
 
@@ -29,15 +31,20 @@ sample rate, you'll get garbage output.
 | WMA        | No              | No               |
 | AIFF       | No              | No               |
 
+Installation
+------------
+For now lwbd isn't published anywhere, but via the awesomeness of [jitpack.io](https://jitpack.io/)
+you can dynamically retrieve it via the 2 steps [described here](https://jitpack.io/#pmonks/lwbd/-SNAPSHOT).
+
 Usage
 -----
-lwbd's capabilities are accessed through a single method, BeatDetector.detectBeats().
+lwbd's capabilities are accessed through a single method, [BeatDetector.detectBeats()](https://github.com/pmonks/lwbd/blob/master/src/main/java/v4lk/lwbd/BeatDetector.java#L261):
 ```java
 File audioFile = new File("/path/to/audiofile.mp3");
 Beat[] beats = BeatDetector.detectBeats(audioFile, AudioType.MP3);
 ```
 BeatDetector provides overloads of this method that support additional input sources
-and options. See src/v4lk/lwbd/Examples.java for examples.
+and options. See [Examples.java](https://github.com/pmonks/lwbd/blob/master/src/main/java/v4lk/lwbd/Examples.java) for examples.
 
 Contributing
 ------------
@@ -61,7 +68,7 @@ support for new formats or platforms, the process is:
    decoder.
 3. Send me a pull request. If it works, I'll merge it in.
 
-The interface only has one method and is extensively Javadoc'd. I've tried to
+The interface only has one method and is extensively Javadoc'd.
 
 Technical
 ---------
